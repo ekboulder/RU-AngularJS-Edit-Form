@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+  <head>
+      <meta charset="utf-8">
+  	 <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Edit in Place</title>
+      <link rel="stylesheet" href="main.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  </head>
+  <body ng-controller="mainController"> 
+  	
+  
+
+    <div class="centeringDiv">
+      <h1>This is an editable profile form</h1> 
+      <p>Click on your profile values to edit them.</p>
+      <table class="tableDesign">
+       
+
+
+        <tr class="tableRow">
+          <td class="data column1">First:
+          </td>
+          <td class="data column2">
+              <div ng-click="editingHandler($event)" class="inputDiv"> {{profileFirstName}}
+                <input ng-click="stopPropagation($event)" ng-blur="editingHandler($event)" ng-model="profileFirstName" ng-show="inputVisibility" id="inputFocus" class="inputClass" >
+              </div>    
+
+          </td>
+        </tr>
+       
+
+
+
+        <tr class="tableRow">
+          <td class="data column1">Last:</td>
+          <td class="data column2">
+              <input ng-model="profileLastName">
+          </td>
+        </tr>
+        <tr class="tableRow">
+          <td class="data column1">Phone:</td>
+          <td class="data column2">{{profileNumber}}</td>
+        </tr>
+      </table>
+
+      <hr>
+      <h1>Just for real time display</h1>
+      <table class="tableDesign">
+        <tr class="tableRow">
+          <td class="data, column1">First:</td>
+          <td class="data, column2">{{profileFirstName}}</td>
+        </tr>
+        <tr class="tableRow">
+          <td class="data, column1">Last:</td>
+          <td class="data, column2">{{profileLastName}}</td>
+        </tr>
+        <tr class="tableRow">
+          <td class="data, column1">Phone:</td>
+          <td class="data, column2">{{profileNumber}}</td>
+        </tr>
+      </table>
+
+
+    </div>
+  	<script type="text/javascript" src="main.js"></script>
+  </boddy>
+
+</html>

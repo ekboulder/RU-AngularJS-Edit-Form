@@ -1,0 +1,49 @@
+
+.centeringDiv {
+ 	position:relative;
+ 	max-width: 80vw;
+	margin: auto;
+	/*background-color: peachpuff;*/
+}
+
+
+.tableDesign, .tableRow, .column1, .column2 {
+	border: solid 5px white;
+	border-collapse: collapse;  
+	background-color: peachpuff;
+}
+
+
+.tableDesign {
+	width: 100%;
+	margin: auto;
+}
+
+.tableRow {
+}
+
+/*.data {
+	height: 20px;
+	
+}*/
+
+.column1 {
+	width: 20%;
+	text-align: right;
+	padding-right: 1vw;
+}
+
+.column2 {
+
+}
+
+.inputDiv {
+	position: relative;
+}
+
+.inputClass {
+	width: 80%;
+	position: absolute;
+	left: 0px;
+	background-color: peachpuff;
+}
